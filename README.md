@@ -95,6 +95,11 @@ The Matlab file used for calculation of Transformation matrices and Jacobian of 
 Below GIF shows end-effector reaching the goal state using Pseudo Inverse Jacobian method.
 ![Example demo](assets/clip.gif) 
 
+**Assumptions:**
+1. Singularity is dealt with randomly perturbing the robot arm joints by a small angle so that the Inverse Jacobian is found in the next iteration of Inverse Kinematics calculation.
+2. Joint angle limits are not applied with respect to the physical model. 
+3. The arm's width is not considered, this might lead to angle commands that cause self-collision near the arm joints.
+
 **Our UML diagram**
 ![UML_diagram](assets/uml.png) 
 
