@@ -84,7 +84,7 @@ On Ubuntu 18.04 and above MoveIt can be installed using following commands:
   ```
  
  Coppeliasim
-  [Download Coppeliasim](https://www.coppeliarobotics.com/files/CoppeliaSim_Player_V4_2_0_Ubuntu20_04.tar.xz) unpack the compressed file.
+  [Download Coppeliasim](https://www.coppeliarobotics.com/downloads) Educational version and unpack the compressed file.
   Run the simulator script by running the following command on cmd:
   ```bash
   $<CoppeliaSim>/coppeliaSim.sh <AcmeRoboticsPathPlanner>/ur5_CoppeliaSim_scene.ttt
