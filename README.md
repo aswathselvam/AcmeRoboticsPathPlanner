@@ -89,7 +89,7 @@ On Ubuntu 18.04 and above MoveIt can be installed using following commands:
   ```bash
   $<CoppeliaSim>/coppeliaSim.sh <AcmeRoboticsPathPlanner>/ur5_CoppeliaSim_scene.ttt
   ```
-The Matlab file used for calculation of Transformation matrices and Jacobian of UR5 robot arm can be found [here](https://drive.google.com/file/d/1btgJoJhWMMR9vwU3pwflIu2xZPp-fAr0/view)
+The Matlab file used for calculation of Transformation matrices and Jacobian of UR5 robot arm can be found [here](assets/axis_transformations.mlx)
 
 **Example Demo:**
 Below GIF shows end-effector reaching the goal state using Pseudo Inverse Jacobian method.
