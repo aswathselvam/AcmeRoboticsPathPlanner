@@ -197,9 +197,9 @@ void Robot::GetEndEffectorPosition() {
 vector<double> Robot::TrajectoryPlanner(double goal_x, double goal_y,
                                         double goal_z) {
   GetEndEffectorPosition();
-  std::vector<double> dx_dy_dz = {(goal_x - state.x) * 0.001,
-                                  (goal_y - state.y) * 0.001,
-                                  (goal_z - state.z) * 0.001};
+  std::vector<double> dx_dy_dz = {(goal_x - state.x) * 0.005,
+                                  (goal_y - state.y) * 0.005,
+                                  (goal_z - state.z) * 0.005};
   return dx_dy_dz;
 }
 
