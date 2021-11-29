@@ -112,6 +112,8 @@ make
 make code_coverage
 ```
 
+## GMock
+Simulator class member function is mocked, link [here](include/mock).
 
 ## Plugins
 
