@@ -16,7 +16,18 @@ extern "C" {
 #include "extApi.h"
 }
 
-class Simulator {
+
+class SimulatorBase {
+ public:
+  /**
+   * @brief Initialization
+   * 
+   */
+  virtual bool Initialize()= 0;
+  virtual ~SimulatorBase() {}
+};
+
+class Simulator : SimulatorBase {
  public:
   /**
    * @brief Construct a new Simulator object. Sets default values to all
@@ -30,7 +41,7 @@ class Simulator {
    * @return true if program connects with CoppeliaSim successfully.
    * @return false if failed to connect with CoppeliaSim.
    */
-  bool Initialize();
+  bool Initialize() override;
 
   /**
    * @brief Sends Finish signal to CoppeliaSim .

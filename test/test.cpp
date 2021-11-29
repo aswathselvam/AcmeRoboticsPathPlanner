@@ -10,11 +10,15 @@
  **/
 
 #include <gtest/gtest.h>
+#include <gmock/gmock.h>
 
 #include "robot.h"      // NOLINT
 #include "simulator.h"  // NOLINT
 #include "solver.h"     // NOLINT
 #include "state.h"      // NOLINT
+#include "mock/mock_simulator.h"
+
+using ::testing::AtMost;                         
 
 Simulator simulator;
 
@@ -22,6 +26,9 @@ Simulator simulator;
  * @brief Tests simulator class
  */
 TEST(TestSimulatorStub, test_simulator) {
+  MockSimulator simMock;
+  EXPECT_CALL(simMock, Initialize()).Times(AtMost(1));
+  
   EXPECT_EQ(simulator.Initialize(), 1);
   EXPECT_NE(simulator.GetClientID(), -1);
   char joint[] = "UR5_joint1";

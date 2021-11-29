@@ -32,8 +32,10 @@ target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/inclu
                                            ${CMAKE_SOURCE_DIR}/../CoppeliaSim_Edu/programming/remoteApi
                                            ${CMAKE_SOURCE_DIR}/../CoppeliaSim_Edu/programming/simMath
                                            ${CMAKE_SOURCE_DIR}/../CoppeliaSim_Edu/programming/IK
+                                           ../vendor/googletest/googlemock/include
+                                           ${GMOCK_INCLUDE_DIRS}
                                            )
-target_link_libraries(cpp-test PUBLIC gtest Threads::Threads)
+target_link_libraries(cpp-test PUBLIC gtest gmock Threads::Threads)
 
 
 message(STATUS "Test level SOURCES include dir: ${SOURCES}")
